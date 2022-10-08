@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calidad", "calidad\calidad.csproj", "{CF817530-BF70-4A5F-A59B-F528669D8202}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF817530-BF70-4A5F-A59B-F528669D8202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF817530-BF70-4A5F-A59B-F528669D8202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF817530-BF70-4A5F-A59B-F528669D8202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF817530-BF70-4A5F-A59B-F528669D8202}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76C3AD6A-84A3-4EC8-9CDC-3445B8673857}
+	EndGlobalSection
+EndGlobal

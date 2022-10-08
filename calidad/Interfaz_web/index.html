@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../Style/Style.css" rel="stylesheet" type="text/css"/>
+    <title>Calidad de software</title>
+</head>
+<body>
+
+    <button>Crear Evento</button>
+    <br />
+    <br />
+    <button>Log out</button>
+    <br />
+    <br />
+
+    <table>
+        <tr>
+            <td>Bad Bunny en concierto</td>
+            <td>Abrir evento</td>
+            <td>Eliminar</td>
+        </tr>
+        <tr>
+            <td>Inteligencia Emotional</td>
+            <td>Abrir evento</td>
+            <td>Eliminar</td>
+        </tr>
+        <tr>
+            <td><a onclick='verificarDia()'>Como hacer que te pasen cosas buenas</a></td>
+            <td>Abrir evento</td>
+            <td>Eliminar</td>
+        </tr>
+    </table>
+
+    <a onclick='verificarDia()'>Como hacer que te pasen cosas buenas</a>
+
+    <script>
+
+        function verificarDia() {
+
+            var d = new Date();
+
+            var dia = d.getDay();
+
+            /*var t_date = d.getDate();*/
+
+            if (dia === 4) {
+                /*alert('el dia concide')*/
+                window.location = 'registroAsistencia.html'
+            }
+            else {
+                alert('El dia no coincide')
+            }
+
+
+            /*window.location = 'registroAsistencia.html'*/
+        }
+
+    </script>
+
+
+</body>
+</html>
