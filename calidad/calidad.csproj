@@ -68,12 +68,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Interfaz_web\index.html" />
+    <Content Include="Interfaz_web\LogIn.aspx" />
     <Content Include="Interfaz_web\registroAsistencia.html" />
     <Content Include="Style\registroAsistencia.css" />
     <Content Include="Style\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLLogin.cs" />
+    <Compile Include="DAL\DALLogin.cs" />
+    <Compile Include="Utils\DataBase.cs" />
+    <Compile Include="Utils\DBUser.cs" />
+    <Compile Include="Utils\FactoryConexion.cs" />
+    <Compile Include="Utils\FactoryDataBase.cs" />
+    <Compile Include="Utils\IDataBase.cs" />
+    <Compile Include="Entidades\Asistencia.cs" />
+    <Compile Include="Entidades\Evento.cs" />
+    <Compile Include="Entidades\Mesa.cs" />
+    <Compile Include="Entidades\Miembro.cs" />
+    <Compile Include="Entidades\Role.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Interfaz_web\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz_web\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,10 +106,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Datos\" />
-    <Folder Include="Reglas_de_negocio\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
