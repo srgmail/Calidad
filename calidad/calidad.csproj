@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Interfaz_web\index.html" />
+    <Content Include="Interfaz_web\Inicio\Home.aspx" />
     <Content Include="Interfaz_web\Inicio\LogIn.aspx" />
     <Content Include="Interfaz_web\registroAsistencia.html" />
     <Content Include="Style\registroAsistencia.css" />
@@ -75,12 +76,30 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLEvento.cs" />
     <Compile Include="BLL\BLLLogin.cs" />
+    <Compile Include="DAL\DALEvento.cs" />
     <Compile Include="DAL\DALLogin.cs" />
+    <Compile Include="Entidades\DTO\EventoDTO.cs" />
+    <Compile Include="Interfaz_web\Inicio\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz_web\Inicio\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_web\Inicio\MenuMaster.Master.cs">
+      <DependentUpon>MenuMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz_web\Inicio\MenuMaster.Master.designer.cs">
+      <DependentUpon>MenuMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DataBase.cs" />
     <Compile Include="Utils\DBUser.cs" />
     <Compile Include="Utils\FactoryConexion.cs" />
     <Compile Include="Utils\FactoryDataBase.cs" />
+    <Compile Include="Utils\Global.cs" />
     <Compile Include="Utils\IDataBase.cs" />
     <Compile Include="Entidades\Asistencia.cs" />
     <Compile Include="Entidades\Evento.cs" />
@@ -96,8 +115,10 @@
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\MessageBox.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Interfaz_web\Inicio\MenuMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuMaster.Master.cs" Inherits="calidad.Interfaz_web.Inicio.HomeAdmin" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" >
+        <div style="display: block; flex: 1; width: 80%; margin:auto">
+           
+
+            <div style="display: flex; flex: 1; width: 100%; height: 50px; background-color: #a7ceeb ; align-items: center;  justify-content:space-between">
+
+                <div><label>Bienvenid@ <%= this.Nombre%></label></div>
+                <div>
+                        <% if (userType == 1)
+                {%>
+                                        <asp:Button ID="btnAdminUser" runat="server" Text="Admin User"  />
+
+
+                   <%}%>
+                    <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" OnClick="btnCerrar_Click" />
+
+
+                </div>
+                
+            </div>
+
+
+
+
+           
+
+
+
+          
+
+
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                          </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

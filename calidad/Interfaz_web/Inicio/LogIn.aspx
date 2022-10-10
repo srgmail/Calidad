@@ -24,7 +24,6 @@
                 Font-Size="10pt" UserNameLabelText="Correo:"
                 PasswordLabelText="Contraseña:"
                 TitleText="Inicio de Sesión"
-                
                 DisplayRememberMe="False"
                 LoginButtonText="Inicio">
             </asp:Login>

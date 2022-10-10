@@ -1,5 +1,6 @@
 ﻿using calidad.DAL;
 using calidad.Entidades;
+using calidad.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,9 @@ namespace calidad.BLL
 
             if (result.Contrasena == pContrasena)
             {
+                Global.userType = result.IdRole;
+                Global.idUser = result.IdUsuario;
+                Global.Nombre = result.Nombre;
                 return true;
 
             }
