@@ -24,17 +24,6 @@ namespace calidad.DAL
             oDBUser.Login = con.UserID;
             oDBUser.Password = con.Password;
 
-            //oDBUser.Login = ConfigurationManager.ConnectionStrings["default"].ConnectionString.;
-            //    oDBUser.Password = Settings.Default.Password;
-
-            //for (int i = 0; i <= ConfigurationManager.ConnectionStrings.Count - 1; i++)
-            //{
-            //    if (ConfigurationManager.ConnectionStrings[i].Name.Equals("default", StringComparison.InvariantCultureIgnoreCase))
-
-            //}
-
-
-
         }
 
         public Usuario GetUserId(string pId)
@@ -42,7 +31,6 @@ namespace calidad.DAL
             DataSet ds = null;
             Usuario oUsuario = null;
             string sql = @" select * from  [Usuario] where idUsuario= @idUsuario";
-           // string sql = @"usp_SELECT_Huesped_ByID";
 
             SqlCommand command = new SqlCommand();
 

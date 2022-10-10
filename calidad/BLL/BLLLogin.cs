@@ -10,13 +10,38 @@ namespace calidad.BLL
 {
     public class BLLLogin
     {
+        DALLogin oDALLogin = new DALLogin();
 
-        public Usuario Login(string pUsuario, string pContrasena)
+        public bool ValidatePassword(string pUsuario, string pContrasena)
         {
-            DALLogin oDALLogin = new DALLogin();
+            
            Usuario result =  oDALLogin.GetUserId(pUsuario);
+
+            if (result.Contrasena == pContrasena)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool userExists(string pUsuario, string pContrasena)
+        {
            
-            return result;
+           Usuario result =  oDALLogin.GetUserId(pUsuario);
+            if (result == null)
+            {
+                return false;
+
+            }
+            else
+            {
+               return true;
+            }
         }
 
       public  bool IsValidEmail(string strIn)

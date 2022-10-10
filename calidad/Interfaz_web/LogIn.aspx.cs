@@ -23,39 +23,26 @@ namespace calidad.Interfaz_web
             BLLLogin oBLLLogin = new BLLLogin();
             if (!oBLLLogin.IsValidEmail(Login1.UserName))
             {
-                Login1.FailureText = "El correo tiene un formato inválido";
+                Login1.FailureText  = "El correo tiene un formato inválido";
 
+            }
+            else if (!oBLLLogin.userExists(Login1.UserName, Login1.Password)) { 
+
+                Login1.FailureText =   "El usuario no existe, póngase en contacto con el administrador";
+
+           }else if(!oBLLLogin.ValidatePassword(Login1.UserName, Login1.Password)){ 
+              Login1.FailureText =   "Contraseña incorrecta";
             }
             else
             {
-                Login1.FailureText =  oBLLLogin.Login(Login1.UserName, Login1.Password).IdUsuario;
 
+                 Login1.FailureText =   "login correcto";
             }
 
 
 
         }
 
-        /* bool IsValidEmail(string strIn)
-         {
-             // Return true if strIn is in valid email format.
-             return Regex.IsMatch(strIn, @"^([\w\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
-         }
-
-         void OnLoggingIn(System.Web.UI.WebControls.LoginCancelEventArgs e)
-         {
-             if (!IsValidEmail(Login1.UserName))
-             {
-                 Login1.InstructionText = "Enter a valid email address.";
-                 Login1.InstructionTextStyle.ForeColor = System.Drawing.Color.RosyBrown;
-                 e.Cancel = true;
-             }
-             else
-             {
-                 Login1.InstructionText = String.Empty;
-             }
-         }
-         */
 
     }
 }
