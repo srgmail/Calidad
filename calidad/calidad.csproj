@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Interfaz_web\index.html" />
-    <Content Include="Interfaz_web\LogIn.aspx" />
+    <Content Include="Interfaz_web\Inicio\LogIn.aspx" />
     <Content Include="Interfaz_web\registroAsistencia.html" />
     <Content Include="Style\registroAsistencia.css" />
     <Content Include="Style\Style.css" />
@@ -88,11 +88,11 @@
     <Compile Include="Entidades\Miembro.cs" />
     <Compile Include="Entidades\Role.cs" />
     <Compile Include="Entidades\Usuario.cs" />
-    <Compile Include="Interfaz_web\LogIn.aspx.cs">
+    <Compile Include="Interfaz_web\Inicio\LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Interfaz_web\LogIn.aspx.designer.cs">
+    <Compile Include="Interfaz_web\Inicio\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -20,6 +20,8 @@ namespace calidad.Interfaz_web
 
         protected void IniciarSesion(object sender, EventArgs e)
         {
+
+            Login1.FailureText = "";
             BLLLogin oBLLLogin = new BLLLogin();
             if (!oBLLLogin.IsValidEmail(Login1.UserName))
             {
