@@ -146,7 +146,7 @@ namespace calidad.DAL
                 //si el asistencia existe, se valida si necesita actualizar 
                 if (oAsistencia.asistencia != pAsistencia.asistencia)
                 {
-                    string sql = @"update Asistencia set idUsuario=@idUsuario,fecha=@fecha,asistencia=@asistencia  where idMiembro=@idMiembro AND idEvento=@idEvento)";
+                    string sql = @"update Asistencia set idUsuario=@idUsuario,fecha=@fecha,asistencia=@asistencia  where idMiembro=@idMiembro AND idEvento=@idEvento";
                     SqlCommand cmd = new SqlCommand();
                     double rows = 0;
 
