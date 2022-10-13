@@ -71,6 +71,7 @@
     <Content Include="Interfaz_web\index.html" />
     <Content Include="Interfaz_web\Inicio\Home.aspx" />
     <Content Include="Interfaz_web\Inicio\LogIn.aspx" />
+    <Content Include="Interfaz_web\Miembros\CargarMiembros.aspx" />
     <Content Include="Interfaz_web\registroAsistencia.html" />
     <Content Include="Style\registroAsistencia.css" />
     <Content Include="Style\Style.css" />
@@ -81,7 +82,7 @@
     <Compile Include="BLL\BLLLogin.cs" />
     <Compile Include="DAL\DALEvento.cs" />
     <Compile Include="DAL\DALLogin.cs" />
-    <Compile Include="Entidades\DTO\EventoDTO.cs" />
+    <Compile Include="Entidades\DTO\MiembrosDTO.cs" />
     <Compile Include="Interfaz_web\Evento\CrearEvento.aspx.cs">
       <DependentUpon>CrearEvento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -102,6 +103,13 @@
     </Compile>
     <Compile Include="Interfaz_web\Inicio\MenuMaster.Master.designer.cs">
       <DependentUpon>MenuMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_web\Miembros\CargarMiembros.aspx.cs">
+      <DependentUpon>CargarMiembros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz_web\Miembros\CargarMiembros.aspx.designer.cs">
+      <DependentUpon>CargarMiembros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\DataBase.cs" />
     <Compile Include="Utils\DBUser.cs" />

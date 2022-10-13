@@ -34,14 +34,25 @@ namespace calidad.Interfaz_web.Inicio
                 TableCell contactName = selectedRow.Cells[1];
                 string contact = contactName.Text;
 
-           
 
-            } else if (e.CommandName == "Eliminar") { 
-            
-            
-            
-            }else if (e.CommandName == "Cargar")
+
+            } else if (e.CommandName == "Eliminar") {
+
+
+
+            } else if (e.CommandName == "Cargar")
             {
+
+                // Convert the row index stored in the CommandArgument
+                // property to an Integer.
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                // Get the last name of the selected author from the appropriate
+                // cell in the GridView control.
+                GridViewRow selectedRow = GridView.Rows[index];
+                TableCell idEventoCell = selectedRow.Cells[0];
+                string redirectString = "../Miembros/CargarMiembros.aspx?id="+ idEventoCell.Text;
+                Response.Redirect(redirectString);
 
             }
         }

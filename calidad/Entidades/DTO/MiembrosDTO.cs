@@ -5,12 +5,11 @@ using System.Web;
 
 namespace calidad.Entidades.DTO
 {
-    //public class EventoDTO
-    //{
-    //    public int idEvento { get; set; }
-    //    public string Nombre { get; set; }
+    public class MiembrosDTO
+    {
+        public int idEvento { get; set; }
+        public string Nombre { get; set; }
+       public DateTime Fecha { get; set; }
 
-    //    public DateTime Fecha { get; set; }
-
-    //}
+    }
 }
