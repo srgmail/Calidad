@@ -14,7 +14,7 @@ namespace calidad.Entidades
 
         public string Apellido { get; set; }
 
-        public bool Confirmado { get; set; }
+       // public bool Confirmado { get; set; }
 
         public bool Activo { get; set; }
 

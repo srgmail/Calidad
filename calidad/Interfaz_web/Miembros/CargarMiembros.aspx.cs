@@ -54,12 +54,10 @@ namespace calidad.Interfaz_web.Miembros
 
                     WorkBook workbook = WorkBook.Load(strFilePath);
                     WorkSheet sheet = workbook.DefaultWorkSheet;
-                    var csvFilereader = new DataTable();
+                    DataTable csvFilereader = new DataTable();
                     csvFilereader = sheet.ToDataTable(true);
                     string columnData = csvFilereader.Columns[0].ToString();
-                    int columnCount = csvFilereader.Columns.Count;
-                    int rowCount = csvFilereader.Rows.Count;
-
+                    insertData(csvFilereader);
 
                 }
             }
@@ -70,5 +68,18 @@ namespace calidad.Interfaz_web.Miembros
             // Display the result of the upload.
             frmConfirmation.Visible = true;
         }
+
+
+
+        protected void insertData(DataTable csvFilereader) {
+            int columnCount = csvFilereader.Columns.Count;
+            int rowCount = csvFilereader.Rows.Count;
+        }
+
+
     }
+
+
+
+
 }

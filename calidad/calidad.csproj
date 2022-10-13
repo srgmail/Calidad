@@ -104,10 +104,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLLAsistencia.cs" />
     <Compile Include="BLL\BLLEvento.cs" />
     <Compile Include="BLL\BLLLogin.cs" />
+    <Compile Include="BLL\BLLMiembro.cs" />
+    <Compile Include="DAL\DALAsistencia.cs" />
     <Compile Include="DAL\DALEvento.cs" />
     <Compile Include="DAL\DALLogin.cs" />
+    <Compile Include="DAL\DALMiembro.cs" />
     <Compile Include="Entidades\DTO\MiembrosDTO.cs" />
     <Compile Include="Interfaz_web\Evento\AdministrarEvento.aspx.cs">
       <DependentUpon>AdministrarEvento.aspx</DependentUpon>
