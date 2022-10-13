@@ -33,7 +33,24 @@ namespace calidad.Interfaz_web.Inicio
                 GridViewRow selectedRow = GridView.Rows[index];
                 TableCell contactName = selectedRow.Cells[1];
                 string contact = contactName.Text;
+                TableCell fecha = selectedRow.Cells[2];
 
+                var dateAndTime = DateTime.Now;
+                var _date = dateAndTime.Date;
+                var dia = DateTime.Now.Day;
+                var mes = DateTime.Now.Month;
+                var anio = DateTime.Now.Year;
+                var FechaCompar = mes + "/" + dia + "/" + anio + " " +"0:00:00";
+
+                if (fecha.Text.Equals(FechaCompar))
+                {
+                    Console.WriteLine("Si funciona");
+                    Response.Redirect("../Evento/AdministrarEvento.aspx");
+                }
+                else 
+                {
+                    Console.WriteLine("No funciona");
+                }
 
 
             } else if (e.CommandName == "Eliminar") {

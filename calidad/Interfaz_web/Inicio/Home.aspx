@@ -45,7 +45,7 @@
                 <asp:BoundField DataField="nombre" HeaderText="Nombre"
                     SortExpression="nombre" />
                 <asp:BoundField DataField="Fecha" HeaderText="Fecha"
-                    SortExpression="Fecha" DataFormatString="dd/mm/yyyy"/>
+                    SortExpression="Fecha" />
                <asp:ButtonField  buttontype="Link" 
             commandname="Abrir" 
             headertext="Abrir" 

@@ -7,10 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-namespace calidad.Interfaz_web.Evento
-{
-    public partial class AdministrarEvento
-    {
+namespace calidad.Interfaz_web.Evento {
+    
+    
+    public partial class AdministrarEvento {
     }
 }
