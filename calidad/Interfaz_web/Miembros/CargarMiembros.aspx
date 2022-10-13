@@ -9,7 +9,7 @@
       <input id="oFile" type="file" name="oFile" runat="server"/>
 
             <asp:button id="btnUpload" type="submit" text="Upload" runat="server" OnClick="btnUpload_Click"></asp:button>
-
+             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" style="width:100px;margin-top:15px"/>
           <asp:Panel ID="frmConfirmation" Visible="False" Runat="server">
     <asp:Label id="lblUploadResult" Runat="server"></asp:Label>
 </asp:Panel>
