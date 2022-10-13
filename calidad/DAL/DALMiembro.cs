@@ -56,9 +56,10 @@ namespace calidad.DAL
                     oMiembro = new Miembro()
                     {
                         IdMiembro = int.Parse(dr["idMiembro"].ToString()),
-                        Nombre = dr["nombre"].ToString(),
+                        Nombre = dr["Nombre"].ToString(),
                         Apellido = dr["Apellido"].ToString(),
-                        Activo = Convert.ToBoolean(int.Parse(dr["Activo"].ToString()))
+                       //Activo = Convert.ToBoolean(int.Parse(dr["Activo"].ToString()))
+                       Activo = bool.Parse(dr["Activo"].ToString())
                     };
 
 

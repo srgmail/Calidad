@@ -11,13 +11,13 @@
     <asp:Label runat="server" Text="Label">Registro Asistencia</asp:Label>
     <br />
     <br />
-    <asp:TextBox ID="idvalue" runat="server">Ingrese id</asp:TextBox>
+    <asp:TextBox ID="idvalue" runat="server"></asp:TextBox>
     <br />
     <br />
     <asp:Button runat="server" Text="Buscar" OnClick="Buscar" />
     <br />
     <br />
-    <asp:TextBox runat="server">Nombre</asp:TextBox>
+    <asp:TextBox ID="Nombre" runat="server"></asp:TextBox>
     <br />
     <br />
     <asp:TextBox runat="server">confirmado</asp:TextBox>

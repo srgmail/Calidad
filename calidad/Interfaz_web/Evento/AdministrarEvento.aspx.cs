@@ -1,4 +1,5 @@
-﻿using System;
+﻿using calidad.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +20,14 @@ namespace calidad.Interfaz_web.Evento
         protected void Buscar(object sender, EventArgs e)
         {
 
-			string _id = idvalue.Text;
+			int _id = int.Parse(idvalue.Text);
+			DALMiembro dALMiembro = new DALMiembro();
+			dALMiembro.GetMiembroById(_id);
+
+			Nombre.Text = "Test";
+			
+			
+			
 
 
         }

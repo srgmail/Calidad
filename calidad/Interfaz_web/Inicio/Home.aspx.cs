@@ -50,6 +50,7 @@ namespace calidad.Interfaz_web.Inicio
                 else 
                 {
                     Console.WriteLine("No funciona");
+                    Response.Redirect("../Evento/AdministrarEvento.aspx");
                 }
 
 
