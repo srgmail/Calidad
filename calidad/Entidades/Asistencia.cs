@@ -17,6 +17,9 @@ namespace calidad.Entidades
 
         public string IdUsuario { get; set; }
 
+        public bool Confirmado { get; set; }
+
+        public bool asistencia { get; set; }
 
 
     }

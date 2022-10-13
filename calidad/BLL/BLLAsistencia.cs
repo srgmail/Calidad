@@ -24,9 +24,9 @@ namespace calidad.BLL
 
             return oAsistencia;
         }
-        public Asistencia GetAsistenciaById(int pId)
+        public Asistencia GetAsistenciaById(int pIdMiembro,int pIdEvento)
         {
-            return oDALAsistencia.GetAsistenciaById(pId);
+            return oDALAsistencia.GetAsistenciaById( pIdMiembro,  pIdEvento);
         }
         //public List<AsistenciaDTO> GetAllAsistencia()
         //{
