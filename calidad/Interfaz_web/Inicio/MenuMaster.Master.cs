@@ -9,10 +9,13 @@ namespace calidad.Interfaz_web.Inicio
         public int userType { get; set; }
         public string Nombre { get; set; }
 
+        public String idUser { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             this.userType = Global.userType;
             this.Nombre = Global.Nombre;
+            this.idUser = Global.idUser;
 
             if(this.userType!=1 && this.userType != 2)
             {
