@@ -76,7 +76,10 @@ namespace calidad.Interfaz_web.Miembros
             int rowCount = csvFilereader.Rows.Count;
         }
 
-
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Inicio/Home.aspx");
+        }
     }
 
 
