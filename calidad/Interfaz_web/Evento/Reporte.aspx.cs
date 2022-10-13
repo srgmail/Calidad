@@ -14,9 +14,6 @@ namespace calidad.Interfaz_web.Evento
 
         }
 
-        protected void GridView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
