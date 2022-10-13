@@ -11,6 +11,9 @@
     <asp:Label runat="server" Text="Label">Registro Asistencia</asp:Label>
     <br />
     <br />
+    <asp:TextBox ID="idNumeroEvento" runat="server"></asp:TextBox>
+    <br />
+    <br />
     <asp:TextBox ID="idvalue" runat="server"></asp:TextBox>
     <br />
     <br />
@@ -27,8 +30,12 @@
     <br />
     <br />
     <asp:Button ID="Registrar" OnClick="Registrar_Click" runat="server" Text="Registrar asistencia" />
-
-
+    <br />
+    <br />
+    <asp:Button ID="Button1" runat="server" Text="Reporte Asistencia" />
+    <br />
+    <br />
+    <asp:Button ID="Button2" runat="server" Text="Cerrar mesa" />
     
 
         

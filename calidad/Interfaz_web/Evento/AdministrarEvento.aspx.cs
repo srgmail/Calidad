@@ -11,10 +11,20 @@ using System.Web.UI.WebControls;
 namespace calidad.Interfaz_web.Evento
 {
 	public partial class AdministrarEvento : System.Web.UI.Page
+
+		
+
 	{
+
+		
+
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			String idEvento = Request.QueryString["id"];
 
+			idNumeroEvento.Text = idEvento;
+
+			
 		}
 
  
@@ -49,17 +59,26 @@ namespace calidad.Interfaz_web.Evento
 			
 			Asistencia oAsistencia = new Asistencia();
 
+			var dia = DateTime.Now.Day;
+			var mes = DateTime.Now.Month;
+			var anio = DateTime.Now.Year;
+			//var FechaCompar = mes + "/" + dia + "/" + anio + " " +"0:00:00";
+			var FechaInsert = dia + "/" + mes + "/" + anio ;
 
-
-			oAsistencia.IdMiembro = int.Parse(idvalue.Text);
-			oAsistencia.IdEvento = idEventoCell.Text;
-			oAsistencia.Fecha = 
-			oAsistencia.IdUsuario =
-			oAsistencia.Confirmado =
-			oAsistencia.asistencia = 
 			
 
+			oAsistencia.IdMiembro = int.Parse(idvalue.Text);
+			oAsistencia.IdEvento = int.Parse(idNumeroEvento.Text);
+			oAsistencia.Fecha =  Convert.ToDateTime(FechaInsert);
+			oAsistencia.IdUsuario = "neiichango@gmail.com";
+			
+			oAsistencia.Confirmado = true;
+			oAsistencia.asistencia = true;
 
-        }
+			bLLAsistencia.SaveAsistencia(oAsistencia);
+
+
+
+		}
     }
 }

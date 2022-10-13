@@ -41,17 +41,18 @@ namespace calidad.Interfaz_web.Inicio
                 var dia = DateTime.Now.Day;
                 var mes = DateTime.Now.Month;
                 var anio = DateTime.Now.Year;
-                var FechaCompar = mes + "/" + dia + "/" + anio + " " +"0:00:00";
+                //var FechaCompar = mes + "/" + dia + "/" + anio + " " +"0:00:00";
+                var FechaCompar = dia + "/" + mes + "/" + anio + " " + "0:00:00";
 
                 if (fecha.Text.Equals(FechaCompar))
                 {
                     Console.WriteLine("Si funciona");
-                    Response.Redirect("../Evento/AdministrarEvento.aspx" + idEventoCell.Text);
+                    Response.Redirect("../Evento/AdministrarEvento.aspx?id=" + idEventoCell.Text);
                 }
                 else 
                 {
                     Console.WriteLine("No funciona");
-                    Response.Redirect("../Evento/AdministrarEvento.aspx");
+                    //Response.Redirect("../Evento/AdministrarEvento.aspx");
                 }
 
 
