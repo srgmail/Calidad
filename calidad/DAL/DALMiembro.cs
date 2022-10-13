@@ -97,7 +97,7 @@ namespace calidad.DAL
 
                 try
                 {
-                    cmd.Parameters.AddWithValue("@idMiembro", pMiembro.Nombre);
+                    cmd.Parameters.AddWithValue("@idMiembro", pMiembro.IdMiembro);
                     cmd.Parameters.AddWithValue("@Nombre", pMiembro.Nombre);
                     cmd.Parameters.AddWithValue("@Apellido", pMiembro.Apellido);
                     cmd.Parameters.AddWithValue("@Activo", (pMiembro.Activo == false) ? 0 : 1);

@@ -56,10 +56,10 @@ namespace calidad.DAL
                     {
                         IdMiembro = int.Parse(dr["IdMiembro"].ToString()),
                         IdEvento = int.Parse(dr["IdEvento"].ToString()),
-                        Fecha = DateTime.Parse(dr["fecha"].ToString()),
-                        IdUsuario = dr["IdUsuario"].ToString(),
-                        Confirmado = Convert.ToBoolean(int.Parse(dr["Activo"].ToString())),
-                        asistencia = Convert.ToBoolean(int.Parse(dr["Activo"].ToString()))
+                        Fecha = dr["Fecha"].ToString().Equals("") ? DateTime.Now :  DateTime.Parse(dr["fecha"].ToString()),
+                        IdUsuario = dr["IdUsuario"].ToString().Equals("") ? null : dr["IdUsuario"].ToString(),
+                        Confirmado =  Convert.ToBoolean(dr["Confirmado"].ToString()),
+                        asistencia = dr["asistencia"].ToString().Equals("")?false:  Convert.ToBoolean(int.Parse(dr["asistencia"].ToString()))
 
                     };
 
@@ -92,7 +92,7 @@ namespace calidad.DAL
             if (oAsistencia == null)
             {
                 //if the user does not exists needs to be inserted
-                string sql = @"Insert into Asistencia(idMiembro,idEvento,Fecha,idUsuario,Confirmado,asistencia) values (@idMiembro,@idEvento,@Fecha,@idUsuario,@Confirmado,@asistencia)";
+                string sql = @"Insert into Asistencia(idMiembro,idEvento,Confirmado) values (@idMiembro,@idEvento,@Confirmado)";
                 SqlCommand cmd = new SqlCommand();
                 double rows = 0;
 
@@ -100,10 +100,10 @@ namespace calidad.DAL
                 {
                     cmd.Parameters.AddWithValue("@idMiembro", pAsistencia.IdMiembro.ToString());
                     cmd.Parameters.AddWithValue("@idEvento", pAsistencia.IdEvento.ToString());
-                    cmd.Parameters.AddWithValue("@Fecha", pAsistencia.Fecha);
-                    cmd.Parameters.AddWithValue("@idUsuario", pAsistencia.IdUsuario);
+              //      cmd.Parameters.AddWithValue("@Fecha", pAsistencia.Fecha);
+            //        cmd.Parameters.AddWithValue("@idUsuario", pAsistencia.IdUsuario);
                     cmd.Parameters.AddWithValue("@Confirmado", (pAsistencia.Confirmado == false) ? 0 : 1);
-                    cmd.Parameters.AddWithValue("@asistencia", (pAsistencia.asistencia == false) ? 0 : 1);
+            //        cmd.Parameters.AddWithValue("@asistencia", (pAsistencia.asistencia == false) ? 0 : 1);
                     cmd.CommandText = sql;
                     cmd.CommandType = CommandType.Text;
 

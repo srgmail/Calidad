@@ -51,12 +51,12 @@ namespace calidad.Interfaz_web.Evento
 
 
 
-			oAsistencia.IdMiembro = int.Parse(idvalue.Text);
-			oAsistencia.IdEvento = idEventoCell.Text;
-			oAsistencia.Fecha = 
-			oAsistencia.IdUsuario =
-			oAsistencia.Confirmado =
-			oAsistencia.asistencia = 
+			//oAsistencia.IdMiembro = int.Parse(idvalue.Text);
+			//oAsistencia.IdEvento = idEventoCell.Text;
+			//oAsistencia.Fecha = 
+			//oAsistencia.IdUsuario =
+			//oAsistencia.Confirmado =
+			//oAsistencia.asistencia = 
 			
 
 
