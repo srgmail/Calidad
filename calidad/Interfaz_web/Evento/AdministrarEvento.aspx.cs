@@ -13,5 +13,15 @@ namespace calidad.Interfaz_web.Evento
 		{
 
 		}
-	}
+
+ 
+
+        protected void Buscar(object sender, EventArgs e)
+        {
+
+			string _id = idvalue.Text;
+
+
+        }
+    }
 }
