@@ -34,12 +34,15 @@ namespace calidad.Interfaz_web.Inicio
                 TableCell contactName = selectedRow.Cells[1];
                 string contact = contactName.Text;
 
-               // Response.Redirect("CrearEvento.aspx");
+           
 
             } else if (e.CommandName == "Eliminar") { 
             
             
             
+            }else if (e.CommandName == "Cargar")
+            {
+
             }
         }
 

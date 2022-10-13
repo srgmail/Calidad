@@ -54,6 +54,10 @@
             commandname="Eliminar" 
             headertext="Eliminar" 
             text="Eliminar"  />
+                 <asp:ButtonField  buttontype="Link" 
+            commandname="Cargar" 
+            headertext="Cargar" 
+            text="Cargar"  />
             </Columns>
         </asp:GridView>
 
