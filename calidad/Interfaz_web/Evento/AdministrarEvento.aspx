@@ -23,7 +23,10 @@
     <asp:TextBox runat="server">confirmado</asp:TextBox>
     <br />
     <br />
-    <asp:TextBox runat="server">Activo</asp:TextBox>
+    <asp:TextBox ID="txtActivo" runat="server"></asp:TextBox>
+    <br />
+    <br />
+    <asp:Button ID="Registrar" OnClick="Registrar_Click" runat="server" Text="Registrar asistencia" />
 
 
     

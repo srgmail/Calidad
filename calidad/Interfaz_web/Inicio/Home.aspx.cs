@@ -33,6 +33,7 @@ namespace calidad.Interfaz_web.Inicio
                 GridViewRow selectedRow = GridView.Rows[index];
                 TableCell contactName = selectedRow.Cells[1];
                 string contact = contactName.Text;
+                TableCell idEventoCell = selectedRow.Cells[0];
                 TableCell fecha = selectedRow.Cells[2];
 
                 var dateAndTime = DateTime.Now;
@@ -45,7 +46,7 @@ namespace calidad.Interfaz_web.Inicio
                 if (fecha.Text.Equals(FechaCompar))
                 {
                     Console.WriteLine("Si funciona");
-                    Response.Redirect("../Evento/AdministrarEvento.aspx");
+                    Response.Redirect("../Evento/AdministrarEvento.aspx" + idEventoCell.Text);
                 }
                 else 
                 {
