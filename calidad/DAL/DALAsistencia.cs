@@ -58,8 +58,8 @@ namespace calidad.DAL
                         IdEvento = int.Parse(dr["IdEvento"].ToString()),
                         Fecha = DateTime.Parse(dr["fecha"].ToString()),
                         IdUsuario = dr["IdUsuario"].ToString(),
-                        Confirmado = Convert.ToBoolean(int.Parse(dr["Activo"].ToString())),
-                        asistencia = Convert.ToBoolean(int.Parse(dr["Activo"].ToString()))
+                        Confirmado = Convert.ToBoolean(int.Parse(dr["Confirmado"].ToString())),
+                        asistencia = Convert.ToBoolean(int.Parse(dr["asistencia"].ToString()))
 
                     };
 

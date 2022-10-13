@@ -1,6 +1,7 @@
 ﻿using calidad.BLL;
 using calidad.DAL;
 using calidad.Entidades;
+using calidad.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace calidad.Interfaz_web.Evento
 
 			idNumeroEvento.Text = idEvento;
 
+			String idUser = Global.idUser;
 			
 		}
 
@@ -65,13 +67,13 @@ namespace calidad.Interfaz_web.Evento
 			//var FechaCompar = mes + "/" + dia + "/" + anio + " " +"0:00:00";
 			var FechaInsert = dia + "/" + mes + "/" + anio ;
 
-			
+			String idUser = Global.idUser;
 
 			oAsistencia.IdMiembro = int.Parse(idvalue.Text);
 			oAsistencia.IdEvento = int.Parse(idNumeroEvento.Text);
 			oAsistencia.Fecha =  Convert.ToDateTime(FechaInsert);
-			oAsistencia.IdUsuario = "neiichango@gmail.com";
-			
+			//oAsistencia.IdUsuario = "neiichango@gmail.com";
+			oAsistencia.IdUsuario = idUser;
 			oAsistencia.Confirmado = true;
 			oAsistencia.asistencia = true;
 
