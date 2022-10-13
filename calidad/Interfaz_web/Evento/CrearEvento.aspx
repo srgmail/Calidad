@@ -12,6 +12,11 @@
 
     <asp:Calendar ID="calFecha" runat="server"></asp:Calendar>
 
+        <asp:label id="Message"
+        forecolor="Red"
+        runat="server"
+     />
+
         <div style="display:flex;flex-direction:row">
              <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClick="btnCrear_Click" style="width:100px;margin-top:15px"/>
              <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" style="width:100px;margin-top:15px"/>
