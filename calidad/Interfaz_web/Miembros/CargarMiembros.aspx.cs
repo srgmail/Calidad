@@ -1,4 +1,6 @@
-﻿using IronXL;
+﻿using calidad.BLL;
+using calidad.Entidades;
+using IronXL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,6 +14,9 @@ namespace calidad.Interfaz_web.Miembros
 {
     public partial class CargarMiembros : System.Web.UI.Page
     {
+
+        BLLMiembro oBLLMiembro = new BLLMiembro();
+        BLLAsistencia oBLLAsistencia = new BLLAsistencia();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -74,6 +79,41 @@ namespace calidad.Interfaz_web.Miembros
         protected void insertData(DataTable csvFilereader) {
             int columnCount = csvFilereader.Columns.Count;
             int rowCount = csvFilereader.Rows.Count;
+
+
+            var row = csvFilereader.Rows[1].ItemArray;
+
+            for (int i = 0; i < rowCount; i++)
+            {
+                var currentRow = csvFilereader.Rows[i].ItemArray;
+                //for (int j = 0; j <= columnCount; j++)
+                //{
+                //insertar miembro
+                Miembro oMiembro = new Miembro();
+
+                oMiembro.IdMiembro = int.Parse(currentRow[0].ToString());
+                oMiembro.Nombre = currentRow[1].ToString();
+                oMiembro.Apellido = currentRow[2].ToString();
+                oMiembro.Activo = (currentRow[3].ToString().ToLower().Equals("si") == true) ? true : false;
+
+                oBLLMiembro.SaveMiembro(oMiembro);
+
+                //insertar asistencia inicial
+
+                Asistencia oAsistencia = new Asistencia();
+                oAsistencia.IdMiembro = int.Parse(currentRow[0].ToString());
+                oAsistencia.IdEvento = int.Parse(Request.QueryString["id"]);
+                oAsistencia.Fecha = DateTime.Now;
+                oAsistencia.IdUsuario = null;
+                oAsistencia.Confirmado = (currentRow[4].ToString().ToLower().Equals("si") == true) ? true : false;
+                oAsistencia.asistencia = false;
+
+                oBLLAsistencia.SaveAsistencia(oAsistencia);
+                //}
+
+            }
+
+
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

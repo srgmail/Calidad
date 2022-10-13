@@ -65,13 +65,13 @@ namespace calidad.Interfaz_web.Evento
 			var mes = DateTime.Now.Month;
 			var anio = DateTime.Now.Year;
 			//var FechaCompar = mes + "/" + dia + "/" + anio + " " +"0:00:00";
-			var FechaInsert = dia + "/" + mes + "/" + anio ;
+			var FechaInsert = anio + "/" + mes + "/" + dia ;
 
 			String idUser = Global.idUser;
 
 			oAsistencia.IdMiembro = int.Parse(idvalue.Text);
 			oAsistencia.IdEvento = int.Parse(idNumeroEvento.Text);
-			oAsistencia.Fecha =  Convert.ToDateTime(FechaInsert);
+			oAsistencia.Fecha =  DateTime.Parse(FechaInsert);
 			//oAsistencia.IdUsuario = "neiichango@gmail.com";
 			oAsistencia.IdUsuario = idUser;
 			oAsistencia.Confirmado = true;
