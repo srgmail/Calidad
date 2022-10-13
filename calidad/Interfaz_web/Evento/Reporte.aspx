@@ -1,31 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interfaz_web/Inicio/MenuMaster.Master" AutoEventWireup="true" CodeBehind="Reporte.aspx.cs" Inherits="calidad.Interfaz_web.Inicio.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reporte.aspx.cs" Inherits="calidad.Interfaz_web.Evento.Reporte" %>
 
+<!DOCTYPE html>
 
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div style="margin-top: 20px">
-        <div style="margin-bottom:20px;height:50px;align-content:space-between;flex-direction:column;display:flex">
-        <asp:Label ID="Label1" runat="server" Text="Reporte" Font-Bold="True" ></asp:Label>
-
-        </div>
-
-
-
-     
-
-        <asp:SqlDataSource ID="Source"
-            SelectCommand="SELECT IdEvento, nombre, Fecha FROM Evento"
-            ConnectionString="<%$ ConnectionStrings:default %>"
-            runat="server" OnSelecting="Source_Selecting" />
-
-
-         <asp:label id="Message"
-        forecolor="Red"
-        runat="server"
-        AssociatedControlID="GridView"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           <H1>Reporte Evento:
+           </H1>
 
 
         <asp:GridView ID="GridView"
@@ -37,36 +22,22 @@
             AllowSorting="true"
             OnRowCommand="GridView_RowCommand"
             HeaderStyle-BackColor="#cccccc"
-            runat="server" DataKeyNames="IdEvento" OnSelectedIndexChanged="GridView_SelectedIndexChanged">
+            runat="server" DataKeyNames="Cedula" OnSelectedIndexChanged="GridView_SelectedIndexChanged">
             <Columns>
-                <asp:BoundField DataField="IdEvento" HeaderText="IdEvento"
+                <asp:BoundField DataField="IdEvento" HeaderText="Cédula"
                     InsertVisible="False" ReadOnly="True" SortExpression="IdEvento" />
                 <asp:BoundField DataField="nombre" HeaderText="Nombre"
                     SortExpression="nombre" />
-                <asp:BoundField DataField="Fecha" HeaderText="Fecha"
+                <asp:BoundField DataField="Confirmo" HeaderText="Confirmó"
+                    SortExpression="confirmo" />
+                <asp:BoundField DataField="Hora" HeaderText="Hora"
                     SortExpression="Fecha" />
-               <asp:ButtonField  buttontype="Link" 
-            commandname="Abrir" 
-            headertext="Abrir" 
-            text="Abrir"  />
-                <asp:ButtonField  buttontype="Link" 
-            commandname="Eliminar" 
-            headertext="Eliminar" 
-            text="Eliminar"  />
-                 <asp:ButtonField  buttontype="Link" 
-            commandname="Cargar" 
-            headertext="Cargar" 
-            text="Cargar"  />
+                <asp:BoundField DataField="Regitro" HeaderText="Regitró"
+                    SortExpression="registro"/>
             </Columns>
         </asp:GridView>
-
-
-
-
-
-    </div>
-
-
-
-
-</asp:Content>
+        </div>
+        <asp:Button ID="Back" runat="server" Text="Atrás" />
+    </form>
+</body>
+</html>

@@ -1,17 +1,22 @@
-﻿using calidad.BLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace calidad.Interfaz_web.Inicio
+namespace calidad.Interfaz_web.Evento
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class Reporte : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        protected void GridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
