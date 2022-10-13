@@ -27,10 +27,10 @@ namespace calidad.BLL
         {
             return oDALEvento.GetEventoById(pId);
         }
-        public List<EventoDTO> GetAllEvento()
-        {
-            return oDALEvento.GetAllEvento();
-        }
+        //public List<EventoDTO> GetAllEvento()
+        //{
+        //    return oDALEvento.GetAllEvento();
+        //}
 
 
 

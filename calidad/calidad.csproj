@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Interfaz_web\Evento\CrearEvento.aspx" />
     <Content Include="Interfaz_web\index.html" />
     <Content Include="Interfaz_web\Inicio\Home.aspx" />
     <Content Include="Interfaz_web\Inicio\LogIn.aspx" />
@@ -81,6 +82,13 @@
     <Compile Include="DAL\DALEvento.cs" />
     <Compile Include="DAL\DALLogin.cs" />
     <Compile Include="Entidades\DTO\EventoDTO.cs" />
+    <Compile Include="Interfaz_web\Evento\CrearEvento.aspx.cs">
+      <DependentUpon>CrearEvento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz_web\Evento\CrearEvento.aspx.designer.cs">
+      <DependentUpon>CrearEvento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz_web\Inicio\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

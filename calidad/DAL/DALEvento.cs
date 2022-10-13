@@ -67,63 +67,63 @@ namespace calidad.DAL
             }
         }
 
-        public List<EventoDTO> GetAllEvento()
-        {
+        //public List<EventoDTO> GetAllEvento()
+        //{
 
-            DataSet ds = null;
-            List<EventoDTO> lista = new List<EventoDTO>();
-            SqlCommand command = new SqlCommand();
+        //    DataSet ds = null;
+        //    List<EventoDTO> lista = new List<EventoDTO>();
+        //    SqlCommand command = new SqlCommand();
 
-            string sql = @"SELECT * from Evento";
+        //    string sql = @"SELECT * from Evento";
 
-            //string sql = @"usp_SELECT_Huesped_All";
-            try
-            {
-                command.CommandText = sql;
-                command.CommandType = CommandType.Text;
-                // command.CommandType = CommandType.StoredProcedure;
-                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(oDBUser.Login, oDBUser.Password)))
-                {
-                    ds = db.ExecuteReader(command, "query");
-                }
+        //    //string sql = @"usp_SELECT_Huesped_All";
+        //    try
+        //    {
+        //        command.CommandText = sql;
+        //        command.CommandType = CommandType.Text;
+        //        // command.CommandType = CommandType.StoredProcedure;
+        //        using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(oDBUser.Login, oDBUser.Password)))
+        //        {
+        //            ds = db.ExecuteReader(command, "query");
+        //        }
 
-                // Si devolvió filas
-                if (ds.Tables[0].Rows.Count > 0)
-                {
+        //        // Si devolvió filas
+        //        if (ds.Tables[0].Rows.Count > 0)
+        //        {
 
-                    // Iterar en todas las filas y Mapearlas
-                    foreach (DataRow dr in ds.Tables[0].Rows)
-                    {
-                        EventoDTO oEventoDTO = new EventoDTO()
-                        {
-                            idEvento = int.Parse(dr["idEvento"].ToString()),
-                            Nombre = dr["nombre"].ToString(),
-                            Fecha = DateTime.Parse(dr["fecha"].ToString()),
+        //            // Iterar en todas las filas y Mapearlas
+        //            foreach (DataRow dr in ds.Tables[0].Rows)
+        //            {
+        //                EventoDTO oEventoDTO = new EventoDTO()
+        //                {
+        //                    idEvento = int.Parse(dr["idEvento"].ToString()),
+        //                    Nombre = dr["nombre"].ToString(),
+        //                    Fecha = DateTime.Parse(dr["fecha"].ToString()),
 
-                        };
+        //                };
 
-                        lista.Add(oEventoDTO);
-                    }
-                }
+        //                lista.Add(oEventoDTO);
+        //            }
+        //        }
 
-                return lista;
-            }
-            catch (SqlException sqlError)
-            {
-                //StringBuilder msg = new StringBuilder();
-                //msg.AppendFormat(Utilitarios.CreateSQLExceptionsErrorDetails(sqlError));
-                //msg.AppendFormat("SQL             {0}\n", command.CommandText);
-                //_MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
-                throw;
-            }
-            catch (Exception er)
-            {
-                //StringBuilder msg = new StringBuilder();
-                //msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(er));
-                //_MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
-                throw;
-            }
-        }
+        //        return lista;
+        //    }
+        //    catch (SqlException sqlError)
+        //    {
+        //        //StringBuilder msg = new StringBuilder();
+        //        //msg.AppendFormat(Utilitarios.CreateSQLExceptionsErrorDetails(sqlError));
+        //        //msg.AppendFormat("SQL             {0}\n", command.CommandText);
+        //        //_MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+        //        throw;
+        //    }
+        //    catch (Exception er)
+        //    {
+        //        //StringBuilder msg = new StringBuilder();
+        //        //msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(er));
+        //        //_MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+        //        throw;
+        //    }
+        //}
 
 
         public Evento GetEventoById(int pId)

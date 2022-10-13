@@ -7,39 +7,48 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace calidad.Interfaz_web.Inicio
+namespace calidad.Interfaz_web.Evento
 {
 
 
-    public partial class Home
+    public partial class CrearEvento
     {
 
         /// <summary>
-        /// Label1 control.
+        /// lblNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// btnCrear control.
+        /// txtNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrear;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Source control.
+        /// lblFecha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Source;
+        protected global::System.Web.UI.WebControls.Label lblFecha;
+
+        /// <summary>
+        /// calFecha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar calFecha;
 
         /// <summary>
         /// Message control.
@@ -51,12 +60,21 @@ namespace calidad.Interfaz_web.Inicio
         protected global::System.Web.UI.WebControls.Label Message;
 
         /// <summary>
-        /// GridView control.
+        /// btnCrear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView;
+        protected global::System.Web.UI.WebControls.Button btnCrear;
+
+        /// <summary>
+        /// btnCancelar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
     }
 }

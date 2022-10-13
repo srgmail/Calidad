@@ -7,15 +7,27 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div style="margin-top: 20px">
+        <div style="margin-bottom:20px;height:50px;align-content:space-between;flex-direction:column;display:flex">
+        <asp:Label ID="Label1" runat="server" Text="Label" Font-Bold="true" >Lista de eventos</asp:Label>
+        <asp:Button ID="btnCrear" runat="server" Text="Crear Evento" OnClick="btnCrear_Click" style="width:100px;margin-top:15px"/>
 
-        <asp:Label ID="Label1" runat="server" Text="Label" Font-Bold="true">Lista de eventos</asp:Label>
+        </div>
 
-        <%-- <asp:GridView ID="dgvDatos" runat="server" ></asp:GridView>--%>
+
+
+     
 
         <asp:SqlDataSource ID="Source"
             SelectCommand="SELECT IdEvento, nombre, Fecha FROM Evento"
             ConnectionString="<%$ ConnectionStrings:default %>"
             runat="server" />
+
+
+         <asp:label id="Message"
+        forecolor="Red"
+        runat="server"
+        AssociatedControlID="GridView"/>
+
 
         <asp:GridView ID="GridView"
             DataSourceID="Source"
@@ -24,6 +36,7 @@
             CellPadding="5"
             AllowPaging="True"
             AllowSorting="true"
+            OnRowCommand="GridView_RowCommand"
             HeaderStyle-BackColor="#cccccc"
             runat="server" DataKeyNames="IdEvento">
             <Columns>
@@ -33,10 +46,14 @@
                     SortExpression="nombre" />
                 <asp:BoundField DataField="Fecha" HeaderText="Fecha"
                     SortExpression="Fecha" />
-               <asp:ButtonField  buttontype="Button" 
-            commandname="Select" 
+               <asp:ButtonField  buttontype="Link" 
+            commandname="Abrir" 
             headertext="Abrir" 
             text="Abrir"  />
+                <asp:ButtonField  buttontype="Link" 
+            commandname="Eliminar" 
+            headertext="Eliminar" 
+            text="Eliminar"  />
             </Columns>
         </asp:GridView>
 
