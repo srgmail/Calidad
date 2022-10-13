@@ -3,10 +3,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+      <div style="flex-direction:column;flex:1;display:flex; width:20%;margin:20px auto">
     <asp:Label ID="Label1" runat="server" Text="Label">CARGAR MIEMBROS</asp:Label>
 
-    <input id="Text1" type="text" />
+      <input id="oFile" type="file" name="oFile" runat="server"/>
 
-    <input id="File1" type="file" />
+            <asp:button id="btnUpload" type="submit" text="Upload" runat="server" OnClick="btnUpload_Click"></asp:button>
 
+          <asp:Panel ID="frmConfirmation" Visible="False" Runat="server">
+    <asp:Label id="lblUploadResult" Runat="server"></asp:Label>
+</asp:Panel>
+       </div>   
 </asp:Content>
