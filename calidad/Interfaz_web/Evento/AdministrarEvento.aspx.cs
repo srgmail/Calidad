@@ -39,7 +39,7 @@ namespace calidad.Interfaz_web.Evento
 			//dALMiembro.GetMiembroById(_id);
 
 			Miembro oMiembro = dALMiembro.GetMiembroById(_id);
-
+            if (oMiembro != null) { 
 			Nombre.Text = oMiembro.Nombre;
 
 			if (oMiembro.Activo.Equals(true))
@@ -50,9 +50,10 @@ namespace calidad.Interfaz_web.Evento
 			{
 				txtActivo.Text = "Miembro inactivo";
 			}
-			
+            }
+            else { txtActivo.Text = "Miembro no existe"; }
 
-        }
+		}
 
         protected void Registrar_Click(object sender, EventArgs e)
         {

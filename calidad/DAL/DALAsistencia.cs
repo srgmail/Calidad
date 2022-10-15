@@ -63,7 +63,7 @@ namespace calidad.DAL
                         Fecha = dr["Fecha"].ToString().Equals("") ? DateTime.Now : DateTime.Parse(dr["fecha"].ToString()),
                         IdUsuario = dr["IdUsuario"].ToString().Equals("") ? null : dr["IdUsuario"].ToString(),
                         Confirmado = Convert.ToBoolean(dr["Confirmado"].ToString()),
-                        asistencia = dr["asistencia"].ToString().Equals("") ? false : Convert.ToBoolean(int.Parse(dr["asistencia"].ToString()))
+                        asistencia = dr["asistencia"].ToString().Equals("") ==true? false : Convert.ToBoolean(int.Parse(dr["asistencia"].ToString()))
                     };
 
 
@@ -170,8 +170,9 @@ namespace calidad.DAL
                         }
 
                         // Si devuelve filas quiere decir que se salvo entonces extraerlo
-                        if (rows > 0)
-                            oAsistencia = GetAsistenciaById(pAsistencia.IdMiembro,pAsistencia.IdEvento);
+                        if (rows > 0) {
+                            // oAsistencia = GetAsistenciaById(pAsistencia.IdMiembro,pAsistencia.IdEvento);
+                        }
 
                     }
                     catch (SqlException sqlError)
