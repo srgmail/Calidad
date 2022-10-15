@@ -75,13 +75,20 @@ namespace calidad.Interfaz_web.Evento
 			oAsistencia.Fecha =  DateTime.Parse(FechaInsert);
 			//oAsistencia.IdUsuario = "neiichango@gmail.com";
 			oAsistencia.IdUsuario = idUser;
-			oAsistencia.Confirmado = true;
+			//oAsistencia.Confirmado = true;
 			oAsistencia.asistencia = true;
 
 			bLLAsistencia.SaveAsistencia(oAsistencia);
 
-
-
+			if (oAsistencia.Confirmado.Equals(true))
+			{
+				Confirmadotextbox.Text = "Confirmado";
+			}
+			else
+			{
+				Confirmadotextbox.Text = "No Confirmado";
+			}
 		}
+            
     }
 }

@@ -23,7 +23,7 @@
     <asp:TextBox ID="Nombre" runat="server"></asp:TextBox>
     <br />
     <br />
-    <asp:TextBox runat="server">confirmado</asp:TextBox>
+    <asp:TextBox ID="Confirmadotextbox" runat="server"></asp:TextBox>
     <br />
     <br />
     <asp:TextBox ID="txtActivo" runat="server"></asp:TextBox>
