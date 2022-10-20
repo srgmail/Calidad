@@ -29,6 +29,7 @@ namespace calidad.Interfaz_web.Evento
             DataTable _Asis = new DataTable();
             _Asis.Columns.AddRange(new DataColumn[] {
                 new DataColumn("idMiembro",typeof(string)),
+                new DataColumn("Nombre",typeof(string)),
                 new DataColumn("Confirmado",typeof(string)),
                 new DataColumn("Fecha",typeof(string)),
                 new DataColumn("idUsuario",typeof(string)),
@@ -42,7 +43,9 @@ namespace calidad.Interfaz_web.Evento
             //oAsistencia.GetAsistencia(2004);
 
             //SqlCommand cmd = new SqlCommand(@" select * from  Asistencia where idEvento=2004" + parametro, Conexion.Open());
-            SqlCommand cmd = new SqlCommand(@" select * from  Asistencia where idEvento=" + parametro , Conexion.Open());
+            //SqlCommand cmd = new SqlCommand(@" select * from  Asistencia where idEvento=" + parametro , Conexion.Open());
+            SqlCommand cmd = new SqlCommand(@"Select Asistencia.idMiembro, Asistencia.Confirmado, Asistencia.Fecha, Asistencia.idUsuario, Miembro.Nombre from Asistencia inner join Miembro on asistencia.idMiembro = Miembro.idMiembro where Asistencia.idEvento =" + parametro,
+                                            Conexion.Open());
 
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -57,10 +60,13 @@ namespace calidad.Interfaz_web.Evento
                 //    dr["Confirmado"].ToString().Replace('0', 'S');
                 //}
 
+               
+
                 while (dr.Read())
                 {
                     _Asis.Rows.Add(
                         dr["idMiembro"].ToString(),
+                        dr["Nombre"].ToString(),
                         dr["Confirmado"].ToString(),
                         dr["Fecha"].ToString(),
                         dr["idUsuario"].ToString()

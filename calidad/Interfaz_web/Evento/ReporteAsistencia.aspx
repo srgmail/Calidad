@@ -15,6 +15,7 @@
                     <asp:GridView ID="GV" runat="server" AutoGenerateColumns="false">
                      <Columns>
                          <asp:BoundField HeaderText="Cedula" DataField="idMiembro"/>
+                         <asp:BoundField HeaderText="Nombre" DataField="Nombre"/>
                          <asp:BoundField HeaderText="Confirmo" DataField="Confirmado"/>
                          <asp:BoundField HeaderText="Hora" DataField="Fecha"/>
                          <asp:BoundField HeaderText="Registrado por" DataField="idUsuario"/>
