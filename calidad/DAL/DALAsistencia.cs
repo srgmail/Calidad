@@ -198,8 +198,71 @@ namespace calidad.DAL
 
         }
 
+        //Aqui
+        public Asistencia GetAsistencia(int pIdEvento)
+        {
+            DataSet ds = null;
+            Asistencia oAsistencia = null;
+            //string sql = @" select * from  Asistencia where idMiembro= @idMiembro AND idEvento=@idEvento ";
+            string sql = @" select * from  Asistencia where idEvento=@idEvento ";
+            //  string sql = @"usp_SELECT_Asistencia_ByID";
+
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+               // command.Parameters.AddWithValue("@idMiembro", pIdMiembro.ToString());
+                command.Parameters.AddWithValue("@idEvento", pIdEvento.ToString());
+
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+                //command.CommandType = CommandType.StoredProcedure;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(oDBUser.Login, oDBUser.Password)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+                }
+
+                // Si retornó valores 
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    //Extraer la primera fila, como se buscó por Id entonces solo una debe devolver  
+                    DataRow dr = ds.Tables[0].Rows[0];
+                    oAsistencia = new Asistencia()
+                    {
+                        IdMiembro = int.Parse(dr["IdMiembro"].ToString()),
+                        IdEvento = int.Parse(dr["IdEvento"].ToString()),
+                        //Fecha = DateTime.Parse(dr["fecha"].ToString()),
+                        //IdUsuario = dr["IdUsuario"].ToString(),
+                        //Confirmado = Convert.ToBoolean(int.Parse(dr["Confirmado"].ToString())),
+                        //asistencia = Convert.ToBoolean(int.Parse(dr["asistencia"].ToString()))
+                        Fecha = dr["Fecha"].ToString().Equals("") ? DateTime.Now : DateTime.Parse(dr["fecha"].ToString()),
+                        IdUsuario = dr["IdUsuario"].ToString().Equals("") ? null : dr["IdUsuario"].ToString(),
+                        Confirmado = Convert.ToBoolean(dr["Confirmado"].ToString()),
+                        asistencia = dr["asistencia"].ToString().Equals("") == true ? false : Convert.ToBoolean(int.Parse(dr["asistencia"].ToString()))
+                    };
 
 
+                }
+
+                return oAsistencia;
+            }
+            catch (SqlException sqlError)
+            {
+                //StringBuilder msg = new StringBuilder();
+                //msg.AppendFormat(Utilitarios.CreateSQLExceptionsErrorDetails(sqlError));
+                //msg.AppendFormat("SQL             {0}\n", command.CommandText);
+                //_MyLogControlAsistencias.ErrorFormat("Error {0}", msg.ToString());
+                throw;
+            }
+            catch (Exception er)
+            {
+                //StringBuilder msg = new StringBuilder();
+                //msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(er));
+                //_MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                throw;
+            }
+        }
 
 
     }

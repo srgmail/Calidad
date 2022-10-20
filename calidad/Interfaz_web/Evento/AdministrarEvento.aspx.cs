@@ -89,6 +89,11 @@ namespace calidad.Interfaz_web.Evento
 				Confirmadotextbox.Text = "No Confirmado";
 			}
 		}
-            
+
+        protected void Reporte(object sender, EventArgs e)
+        {
+			Response.Redirect("../Evento/ReporteAsistencia.aspx?idEvento=" + idNumeroEvento.Text);
+
+		}
     }
 }

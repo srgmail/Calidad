@@ -33,7 +33,10 @@ namespace calidad.BLL
         //    return oDALAsistencia.GetAllAsistencia();
         //}
 
-
+        public Asistencia GetAsistencia(int pIdEvento)
+        {
+            return oDALAsistencia.GetAsistencia(pIdEvento);
+        }
 
 
     }

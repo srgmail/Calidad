@@ -95,11 +95,11 @@
     <Content Include="Interfaz_web\Evento\AdministrarEvento.aspx" />
     <Content Include="Interfaz_web\Evento\CrearEvento.aspx" />
     <Content Include="Interfaz_web\Evento\Reporte.aspx" />
+    <Content Include="Interfaz_web\Evento\ReporteAsistencia.aspx" />
     <Content Include="Interfaz_web\index.html" />
     <Content Include="Interfaz_web\Inicio\Home.aspx" />
     <Content Include="Interfaz_web\Inicio\LogIn.aspx" />
     <Content Include="Interfaz_web\Miembros\CargarMiembros.aspx" />
-    <Content Include="Interfaz_web\registroAsistencia.html" />
     <Content Include="Style\registroAsistencia.css" />
     <Content Include="Style\Style.css" />
     <Content Include="Web.config" />
@@ -113,6 +113,7 @@
     <Compile Include="DAL\DALEvento.cs" />
     <Compile Include="DAL\DALLogin.cs" />
     <Compile Include="DAL\DALMiembro.cs" />
+    <Compile Include="Entidades\Conexion.cs" />
     <Compile Include="Entidades\DTO\MiembrosDTO.cs" />
     <Compile Include="Interfaz_web\Evento\AdministrarEvento.aspx.cs">
       <DependentUpon>AdministrarEvento.aspx</DependentUpon>
@@ -134,6 +135,13 @@
     </Compile>
     <Compile Include="Interfaz_web\Evento\Reporte.aspx.designer.cs">
       <DependentUpon>Reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_web\Evento\ReporteAsistencia.aspx.cs">
+      <DependentUpon>ReporteAsistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz_web\Evento\ReporteAsistencia.aspx.designer.cs">
+      <DependentUpon>ReporteAsistencia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interfaz_web\Inicio\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

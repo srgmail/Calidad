@@ -32,7 +32,7 @@
     <asp:Button ID="Registrar" OnClick="Registrar_Click" runat="server" Text="Registrar asistencia" />
     <br />
     <br />
-    <asp:Button ID="Button1" runat="server" Text="Reporte Asistencia" />
+    <asp:Button ID="Button1" runat="server" Text="Reporte Asistencia" OnClick="Reporte"/>
     <br />
     <br />
     <asp:Button ID="Button2" runat="server" Text="Cerrar mesa" />
