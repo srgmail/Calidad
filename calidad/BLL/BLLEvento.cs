@@ -3,6 +3,7 @@ using calidad.Entidades;
 using calidad.Entidades.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -32,7 +33,7 @@ namespace calidad.BLL
         //    return oDALEvento.GetAllEvento();
         //}
 
-
+        
 
     }
 }

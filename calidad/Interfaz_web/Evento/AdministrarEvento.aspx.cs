@@ -95,5 +95,19 @@ namespace calidad.Interfaz_web.Evento
 			Response.Redirect("../Evento/ReporteAsistencia.aspx?idEvento=" + idNumeroEvento.Text);
 
 		}
+
+        protected void Cerrar(object sender, EventArgs e)
+        {
+			BLLMesa oBllMesa = new BLLMesa();
+			Mesa oMesa = new Mesa();
+
+			oMesa.IdEvento = int.Parse(idNumeroEvento.Text);
+			oMesa.IdUsuario = Global.idUser;
+			oMesa.Estado = true;
+
+			oBllMesa.CerrarMesa(oMesa);
+
+
+		}
     }
 }

@@ -108,10 +108,12 @@
     <Compile Include="BLL\BLLAsistencia.cs" />
     <Compile Include="BLL\BLLEvento.cs" />
     <Compile Include="BLL\BLLLogin.cs" />
+    <Compile Include="BLL\BLLMesa.cs" />
     <Compile Include="BLL\BLLMiembro.cs" />
     <Compile Include="DAL\DALAsistencia.cs" />
     <Compile Include="DAL\DALEvento.cs" />
     <Compile Include="DAL\DALLogin.cs" />
+    <Compile Include="DAL\DALMesa.cs" />
     <Compile Include="DAL\DALMiembro.cs" />
     <Compile Include="Entidades\Conexion.cs" />
     <Compile Include="Entidades\DTO\MiembrosDTO.cs" />
