@@ -6,7 +6,7 @@
     <div style="flex-direction:column;flex:1;display:flex; width:20%;margin:20px auto">
     <asp:Label ID="lblNombre" runat="server" Text="Nombre del evento:"></asp:Label>
 
-    <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txtNombre" runat="server" ></asp:TextBox>
 
     <asp:Label ID="lblFecha" runat="server" Text="Fecha del evento:"></asp:Label>
 

@@ -9,7 +9,7 @@ namespace calidad.Entidades
     public class Conexion
     {
         public static SqlConnection Open() {
-            SqlConnection Conn = new SqlConnection("Data Source=DESKTOP-LT2FBGP;Initial Catalog=CalidadProyecto;Integrated Security=False;User Id=sa;Password=123456");
+            SqlConnection Conn = new SqlConnection("Data Source=nechango;Initial Catalog=CalidadProyecto;Integrated Security=False;User Id=sa;Password=123456");
             Conn.Open();
             return Conn;
 
@@ -17,7 +17,7 @@ namespace calidad.Entidades
 
         public static SqlConnection Close()
         {
-            SqlConnection Conn = new SqlConnection("Data Source=DESKTOP-LT2FBGP;Initial Catalog=CalidadProyecto;Integrated Security=False;User Id=sa;Password=123456");
+            SqlConnection Conn = new SqlConnection("Data Source=nechango;Initial Catalog=CalidadProyecto;Integrated Security=False;User Id=sa;Password=123456");
             Conn.Close();
             return Conn;
 
